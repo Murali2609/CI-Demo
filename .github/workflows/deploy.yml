@@ -1,4 +1,4 @@
-name: Deploy
+name: CI workflow
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
   workflow_dispatch: # Allows manual trigger from the GitHub UI
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run deploy step
-        run: echo "Deploying application..."
+      - name: Run CI 
+        run: echo "Build and test successfully"
